@@ -5,8 +5,13 @@ inputs:
     description: '1 to update libnx'
     required: false
     default: '1'
+  cmd:
+    description: 'Command line to execute'
+    require: true
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.update-libnx }}
+    - ${{ inputs.cmd }}
