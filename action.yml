@@ -1,0 +1,12 @@
+name: 'devkitpro-action'
+description: 'Compile your project using devkitpro'
+inputs:
+  update-libnx:
+    description: '1 to update libnx'
+    required: false
+    default: '1'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.update-libnx }}
