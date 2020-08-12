@@ -1,4 +1,4 @@
-FROM devkitpro/devkita64_devkitarm:20200405
+FROM devkitpro/devkita64_devkitarm:20200730
 
 RUN dkp-pacman -Syyu --noconfirm switch-dev libnx \
     && dkp-pacman -Scc --noconfirm
