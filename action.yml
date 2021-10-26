@@ -11,7 +11,7 @@ inputs:
     default: ''
 runs:
   using: 'docker'
-  image: 'docker://spacemeowx2/devkitpro-action:20210623'
+  image: 'docker://spacemeowx2/devkitpro-action:20211019'
   args:
     - ${{ inputs.update-libnx }}
     - ${{ inputs.cmd }}
