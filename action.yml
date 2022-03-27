@@ -1,17 +1,22 @@
-name: 'devkitpro-action'
-description: 'Compile your project using devkitpro'
+name: "devkitpro-action"
+description: "Compile your project using devkitpro"
 inputs:
-  update-libnx:
-    description: '1 to update libnx'
-    required: false
-    default: '0'
   cmd:
-    description: 'Command line to execute'
-    require: true
-    default: ''
+    description: "Command line to execute"
+    required: true
+    default: ""
+  update-libnx:
+    description: "1 to update libnx"
+    required: false
+    default: "0"
+  libnx-rev:
+    description: "libnx rev"
+    required: false
+    default: "master"
 runs:
-  using: 'docker'
-  image: 'docker://spacemeowx2/devkitpro-action:20211026'
+  using: "docker"
+  image: "docker://spacemeowx2/devkitpro-action:20220327"
   args:
-    - ${{ inputs.update-libnx }}
     - ${{ inputs.cmd }}
+    - ${{ inputs.update-libnx }}
+    - ${{ inputs.libnx-rev }}
